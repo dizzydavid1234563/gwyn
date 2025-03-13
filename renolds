@@ -1,0 +1,380 @@
+local player = game.Players.LocalPlayer
+
+local playerGui = player.PlayerGui
+
+local hotbar = playerGui:FindFirstChild("Hotbar")
+
+local backpack = hotbar:FindFirstChild("Backpack")
+
+local hotbarFrame = backpack:FindFirstChild("Hotbar")
+
+local baseButton = hotbarFrame:FindFirstChild("1").Base
+
+local ToolName = baseButton.ToolName
+
+
+ToolName.Text = "Fist barrage"
+
+
+local player = game.Players.LocalPlayer
+
+local playerGui = player.PlayerGui
+
+local hotbar = playerGui:FindFirstChild("Hotbar")
+
+local backpack = hotbar:FindFirstChild("Backpack")
+
+local hotbarFrame = backpack:FindFirstChild("Hotbar")
+
+local baseButton = hotbarFrame:FindFirstChild("2").Base
+
+local ToolName = baseButton.ToolName
+
+
+ToolName.Text = "upper"
+
+
+local player = game.Players.LocalPlayer
+
+local playerGui = player.PlayerGui
+
+local hotbar = playerGui:FindFirstChild("Hotbar")
+
+local backpack = hotbar:FindFirstChild("Backpack")
+
+local hotbarFrame = backpack:FindFirstChild("Hotbar")
+
+local baseButton = hotbarFrame:FindFirstChild("3").Base
+
+local ToolName = baseButton.ToolName
+
+
+ToolName.Text = "bumrush"
+
+
+local player = game.Players.LocalPlayer
+
+local playerGui = player.PlayerGui
+
+local hotbar = playerGui:FindFirstChild("Hotbar")
+
+local backpack = hotbar:FindFirstChild("Backpack")
+
+local hotbarFrame = backpack:FindFirstChild("Hotbar")
+
+local baseButton = hotbarFrame:FindFirstChild("4").Base
+
+local ToolName = baseButton.ToolName
+
+
+ToolName.Text = "Speed Of Light"
+
+local Players = game:GetService("Players")
+
+local player = Players.LocalPlayer
+
+local playerGui = player:WaitForChild("PlayerGui")
+
+
+local function findGuiAndSetText()
+
+    local screenGui = playerGui:FindFirstChild("ScreenGui")
+
+    if screenGui then
+
+        local magicHealthFrame = screenGui:FindFirstChild("MagicHealth")
+
+        if magicHealthFrame then
+
+            local textLabel = magicHealthFrame:FindFirstChild("TextLabel")
+
+            if textLabel then
+
+                textLabel.Text = "Physics🧪"
+
+            end
+
+        end
+
+    end
+
+end
+
+
+playerGui.DescendantAdded:Connect(findGuiAndSetText)
+
+findGuiAndSetText()
+
+--[[Move 1]]
+ 
+local animationId = 15290930205  -- ID of the animation to check
+local newAnimationId = 12460977270  -- ID of the new animation to play
+ 
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+ 
+-- Function to handle the animation being played
+local function onAnimationPlayed(animationTrack)
+    if animationTrack.Animation.AnimationId == "rbxassetid://" .. tostring(animationId) then
+        for _, animTrack in pairs(humanoid:GetPlayingAnimationTracks()) do
+            animTrack:Stop()
+        end
+ 
+        local AnimAnim = Instance.new("Animation")
+        AnimAnim.AnimationId = "rbxassetid://" .. tostring(newAnimationId)
+        local Anim = humanoid:LoadAnimation(AnimAnim)
+
+        local startTime = 2.5 --[[The Start Time Bitc]]
+ 
+        Anim:Play()
+        Anim:AdjustSpeed(0.7)
+
+    end
+end
+ 
+humanoid.AnimationPlayed:Connect(onAnimationPlayed)
+ 
+--[[END OF MOVE 1 ANIM]]
+ 
+--[[Move 2]]
+ 
+local animationId = 15145462680
+local newAnimationId = 17889080495
+ 
+-- Function to handle the animation being played
+local function onAnimationPlayed(animationTrack)
+    if animationTrack.Animation.AnimationId == "rbxassetid://" .. tostring(animationId) then
+        for _, animTrack in pairs(humanoid:GetPlayingAnimationTracks()) do
+            animTrack:Stop()
+        end
+ 
+        local AnimAnim = Instance.new("Animation")
+        AnimAnim.AnimationId = "rbxassetid://" .. tostring(newAnimationId)
+        local Anim = humanoid:LoadAnimation(AnimAnim)
+ 
+        Anim:Play()
+        Anim:AdjustSpeed(1.2)
+    end
+end
+ 
+humanoid.AnimationPlayed:Connect(onAnimationPlayed)
+ 
+--[[END OF MOVE 2 ANIM]]
+ 
+--[[Move 3]]
+ 
+local animationId = 15295895753
+local newAnimationId = 129651400898906
+ 
+-- Function to handle the animation being played
+local function onAnimationPlayed(animationTrack)
+    if animationTrack.Animation.AnimationId == "rbxassetid://" .. tostring(animationId) then
+        for _, animTrack in pairs(humanoid:GetPlayingAnimationTracks()) do
+            animTrack:Stop()
+        end
+ 
+        local AnimAnim = Instance.new("Animation")
+        AnimAnim.AnimationId = "rbxassetid://" .. tostring(newAnimationId)
+        local Anim = humanoid:LoadAnimation(AnimAnim)
+ 
+        Anim:Play()
+        Anim:AdjustSpeed(1)
+    end
+end
+ 
+humanoid.AnimationPlayed:Connect(onAnimationPlayed)
+ 
+--[[END OF MOVE 3 ANIM]]
+ 
+--[[Move 4]]
+ 
+local animationId = 15311685628
+local newAnimationId = 17861844708
+ 
+-- Function to handle the animation being played
+local function onAnimationPlayed(animationTrack)
+    if animationTrack.Animation.AnimationId == "rbxassetid://" .. tostring(animationId) then
+        for _, animTrack in pairs(humanoid:GetPlayingAnimationTracks()) do
+            animTrack:Stop()
+        end
+ 
+        local AnimAnim = Instance.new("Animation")
+        AnimAnim.AnimationId = "rbxassetid://" .. tostring(newAnimationId)
+        local Anim = humanoid:LoadAnimation(AnimAnim)
+ 
+        Anim:Play()
+        Anim:AdjustSpeed(1)
+    end
+end
+ 
+humanoid.AnimationPlayed:Connect(onAnimationPlayed)
+ 
+--[[END OF MOVE 4 ANIM]]
+ 
+--[[Move air3]]
+ 
+local animationId = 15295336270
+local newAnimationId = 17464644182
+ 
+-- Function to handle the animation being played
+local function onAnimationPlayed(animationTrack)
+    if animationTrack.Animation.AnimationId == "rbxassetid://" .. tostring(animationId) then
+        for _, animTrack in pairs(humanoid:GetPlayingAnimationTracks()) do
+            animTrack:Stop()
+        end
+ 
+        local AnimAnim = Instance.new("Animation")
+        AnimAnim.AnimationId = "rbxassetid://" .. tostring(newAnimationId)
+        local Anim = humanoid:LoadAnimation(AnimAnim)
+ 
+        local startTime = 0
+        Anim:Play()
+        Anim:AdjustSpeed(1)
+        Anim.TimePosition = startTime
+        Anim:AdjustSpeed(1)
+ 
+        wait(1)
+        Anim:Stop()
+    end
+end
+ 
+humanoid.AnimationPlayed:Connect(onAnimationPlayed)
+ 
+--[[END OF MOVE air3 ANIM]]
+ 
+--[[Move Counter]]
+ 
+local animationId = 15334974550
+local newAnimationId = 12460977270
+ 
+-- Function to handle the animation being played
+local function onAnimationPlayed(animationTrack)
+    if animationTrack.Animation.AnimationId == "rbxassetid://" .. tostring(animationId) then
+        for _, animTrack in pairs(humanoid:GetPlayingAnimationTracks()) do
+            animTrack:Stop()
+        end
+ 
+        local AnimAnim = Instance.new("Animation")
+        AnimAnim.AnimationId = "rbxassetid://" .. tostring(newAnimationId)
+        local Anim = humanoid:LoadAnimation(AnimAnim)
+ 
+        Anim:Play()
+        Anim:AdjustSpeed(1)
+    end
+end
+ 
+humanoid.AnimationPlayed:Connect(onAnimationPlayed)
+ 
+--[[END OF Counter ANIM]]
+
+--[[Move Dash]]
+
+local animationId = 13380255751  -- ID of the animation to check
+local newAnimationId = 17838006839  -- ID of the new animation to play
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+
+-- Function to handle the animation being played
+local function onAnimationPlayed(animationTrack)
+    -- Check if the current animation matches the animationId we're looking for
+    if animationTrack.Animation.AnimationId == "rbxassetid://" .. tostring(animationId) then
+        -- Stop the currently playing animation
+        for _, animTrack in pairs(humanoid:GetPlayingAnimationTracks()) do
+            animTrack:Stop()
+        end
+        -- Create and play the new animation
+        local AnimAnim = Instance.new("Animation")
+        AnimAnim.AnimationId = "rbxassetid://" .. tostring(newAnimationId)
+        local Anim = humanoid:LoadAnimation(AnimAnim)
+        
+        -- Play the new animation
+local startTime = 0
+Anim:Play()
+Anim:AdjustSpeed(1)
+Anim.TimePosition = startTime
+Anim:AdjustSpeed(1)
+
+wait(1) -- Stops after 2 seconds
+Anim:Stop()-- Adjust the speed of the animation as needed
+    end
+end
+
+-- Connect the function to an event that detects when the animation is played
+humanoid.AnimationPlayed:Connect(onAnimationPlayed)
+
+
+--[[END OF DASH ANIM]]
+
+--[[Adding Quote or Message when Executed]]
+
+local player = game.Players.LocalPlayer
+repeat wait() until player.Character
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+-- Messages to send
+local messages = {"Physics is Cool"}
+
+
+local function sendMessage(text)
+    ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(text, "All")
+end
+
+for _, message in ipairs(messages) do
+    sendMessage(message)
+    wait(0.9) -- Wait time for each message
+end
+
+--[[END OF QUOTES]]
+
+--[[Execute Anims (Animations when you execute script]]
+
+local p = game.Players.LocalPlayer
+local Humanoid = p.Character:WaitForChild("Humanoid")
+
+for _, animTrack in pairs(Humanoid:GetPlayingAnimationTracks()) do
+    animTrack:Stop()
+end
+
+local AnimAnim = Instance.new("Animation")
+AnimAnim.AnimationId = "rbxassetid://16746843881" -- Replace with your animation ID
+
+local Anim = Humanoid:LoadAnimation(AnimAnim)
+
+local startTime = 0
+
+Anim:Play()
+Anim:AdjustSpeed(0)
+Anim.TimePosition = startTime
+Anim:AdjustSpeed(1)
+
+--[[END OF EXECUTE ANIMS]]
+
+-- Removing Atomics Sword
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local Workspace = game:GetService("Workspace")
+
+local livePlayer = Workspace:WaitForChild("Live"):WaitForChild(LocalPlayer.Name)
+
+local function removeBricks()
+    for _, child in pairs(livePlayer:GetChildren()) do
+        if child.Name == "#NinjaKATANA" or child.Name == "Sheathe" or child.Name == "#KATANAWEAPON" then
+            child:Destroy()
+        end
+    end
+end
+
+removeBricks()
+
+livePlayer.ChildAdded:Connect(function(child)
+    if child.Name == "#NinjaKATANA" or child.Name == "Sheathe" or child.Name == "#KATANAWEAPON" then
+        child:Destroy()
+    end
+end)
