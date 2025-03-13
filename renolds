@@ -140,7 +140,7 @@ humanoid.AnimationPlayed:Connect(onAnimationPlayed)
 --[[Move 2]]
  
 local animationId = 15145462680
-local newAnimationId = 17889080495
+local newAnimationId = 17860467628
  
 -- Function to handle the animation being played
 local function onAnimationPlayed(animationTrack)
